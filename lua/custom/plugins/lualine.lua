@@ -12,7 +12,7 @@ end
 return {
   'nvim-lualine/lualine.nvim',
   event = 'VeryLazy',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  dependencies = { 'echasnovski/mini.icons' },
   config = function()
     -- local cyberdream = require 'lualine.themes.cyberdream'
     -- p
