@@ -6,7 +6,8 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+    -- 'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+    'echasnovski/mini.icons',
     'MunifTanjim/nui.nvim',
   },
   cmd = 'Neotree',
