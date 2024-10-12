@@ -193,6 +193,14 @@ return { -- LSP Configuration & Plugins
       },
     }
 
+        -- Setup with locally installed servers
+    local local_servers = { 'pyright', 'gopls', 'clangd', 'ruff' }
+    for _, lsp in ipairs(local_servers) do
+      require('lspconfig')[lsp].setup {
+        capabilities = capabilities,
+      }
+    end
+
     -- Ensure the servers and tools above are installed
     --  To check the current status of installed tools and/or manually install
     --  other tools, you can run
