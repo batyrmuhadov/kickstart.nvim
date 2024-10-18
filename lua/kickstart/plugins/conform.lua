@@ -25,6 +25,11 @@ return { -- Autoformat
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
+      cpp = { 'clangd-format' },
+      c = { 'clangd-format' },
+      python = { 'black' },
+      go = { 'goimports', 'gofumpt' },
+
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
