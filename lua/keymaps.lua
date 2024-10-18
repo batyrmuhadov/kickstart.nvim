@@ -4,6 +4,19 @@
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Quit insert mode' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<cmd>:w<cr><Esc>', { desc = 'Save file' })
+vim.keymap.set('n', '<C-q>', '<cmd>:qa<cr>', { desc = 'Quit' })
+vim.keymap.set('n', '<C-a>', 'ggVG', { desc = 'Select all' })
+
+-- Moving in insert mode
+vim.keymap.set('i', '<M-b>', '<ESC>^i', { desc = 'move beginning of line' })
+vim.keymap.set('i', '<M-e>', '<End>', { desc = 'move end of line' })
+vim.keymap.set('i', '<M-h>', '<Left>', { desc = 'move left' })
+vim.keymap.set('i', '<M-l>', '<Right>', { desc = 'move right' })
+vim.keymap.set('i', '<M-j>', '<Down>', { desc = 'move down' })
+vim.keymap.set('i', '<M-k>', '<Up>', { desc = 'move up' })
+
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
